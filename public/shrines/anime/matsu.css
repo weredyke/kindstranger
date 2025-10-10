@@ -1,0 +1,338 @@
+ /*cursor shit*/
+ 
+* {
+   cursor: url('/images/shrines/matsu/logo.cur'), auto;
+}
+
+body {
+   cursor: url('/images/shrines/matsu/logo.cur'), auto;
+}
+
+iframe, a, a:hover {
+  cursor: url('/images/shrines/matsu/kitty.cur'), auto;
+}
+
+img>a:hover {
+  cursor: url('/images/shrines/matsu/kitty.cur'), auto;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, pre, s, del, li {
+  cursor: url('/images/shrines/matsu/logo.cur'), auto;
+}
+  
+/*font shit*/
+
+@font-face {
+    font-family: 'fontreg';
+    src: url('/images/shrines/matsu/font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* this is called a CSS reset, it removes default styles from your page */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 50px;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*meat and potatoes*/
+
+html {
+  font-size: 15px; 
+}
+
+body {
+	margin: 0;
+	background-color: #000000;
+	font-family: 'fontreg';
+	color: #ffffff;
+	background-image: url('/images/shrines/matsu/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-size: 100% 100%;
+	height: 100%;
+	font-size: 15px;
+	line-height: 1;
+		padding: 0 2rem;
+}
+
+#main {
+  margin-left: auto;
+	margin-right: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	letter-spacing: 1.5px;
+	line-height: 22px;
+	margin-top: 1%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.msg {
+  border: 4px #D95030 double;
+  padding: 20px;
+  margin: 30px;
+  text-align: center;
+  background-color: rgba(000,000,000,0.7);
+}  
+
+/*grid layout*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-template-areas:
+    "one one two two three three . . . ."
+    "one one two two three three . . . ."
+    "left left header header header header header header right right"
+    "left left content content content content content content right right"
+    "left left content content content content content content right right"
+    "left left content content content content content content right right"
+    ". . . . four four five five six six"
+    ". . . . four four five five six six";
+}
+
+.one { 
+	grid-area: one; 
+	border: 3px outset #e77888;
+}
+
+.two {  
+	grid-area: two; 
+	border: 3px outset #7c89d8;
+}
+
+.three {  
+	grid-area: three; 
+	border: 3px outset #cae9a6;
+}
+
+.six {  
+	grid-area: six; 
+	border: 3px outset #e9aef0;
+}
+
+.five {  
+	grid-area: five; 
+	border: 3px outset #eaf494;
+}
+
+.four {  
+	grid-area: four; 
+	border: 3px outset #a691c9;
+}
+
+.header {  
+	grid-area: header; 
+}
+
+.left {  
+	grid-area: left; 
+}
+
+.right {  
+	grid-area: right; 
+}
+
+.content {  
+	grid-area: content; 
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+/*for some kind of blinking animation */
+
+.blink_me {
+	animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+/* Table Styling */
+
+table {
+	width: 80%;
+	font-size: 30px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+tr:nth-child(even) {
+	background-color: #D95030;
+}
+
+td {
+	padding: 10px;
+}
+
+/*graphics styles*/
+
+.buttons img {
+  margin: 3px; 
+}
+
+.blinkies img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*misc styles*/
+
+strong {
+  font-weight: normal;
+  color: #D95030;
+  font-size: 15px;
+}
+
+summary {
+  font-size: 15px; 
+}
+
+li {
+  margin: 10px;
+  font-size: 15px;
+}
+
+span {
+  font-size: 15px;
+  background-color: #D95030;
+  color: black;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+p { 
+  font-size: 15px;
+}
+
+a {
+	color: #FFF47D;
+	font-weight:normal;
+}
+
+a:hover {
+ color: #D95030;
+ font-weight: normal;
+ text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+::selection {
+  background: magenta;
+  color: white;
+}
+
+/* All stuff below here is for viewing your site on different devices */
+
+@media screen and (max-width: 1536px) {
+    #main {
+	zoom: 70%;
+}
+}
+
+@media screen and (max-width: 1440px) {
+    #main {
+	zoom: 65%;
+}
+}
+
+@media screen and (max-width: 1366px) {
+    #main {
+	zoom: 60%;
+}
+}
+
+@media screen and (max-width: 1280px) {
+    #main {
+	zoom: 55%;
+}
+}
+
+@media screen and (max-width: 1024px) {
+    #main {
+	zoom: 50%;
+}
+}
+
+@media screen and (max-width: 992px) {
+    #main {
+	zoom: 45%;
+}
+}
+
+@media screen and (max-width: 800px) {
+    #main {
+	zoom: 40%;
+}
+}
+
+@media screen and (max-width: 600px) {
+  #main {
+	zoom: 35%;
+}
+}

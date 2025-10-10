@@ -1,0 +1,109 @@
+/* first we must learn what css is made up of. a selector is the thing that references the html tag, a property is the thing before the colon and the property is the thing before the semi-colon. these two together are called declorations.
+FEEL FREE TO FUCK AROUND WITH THE VALUES OF EACH PROPERTY*/
+
+h1 /* this is a selector, and it changes the styles for anything inside <h1></h1> tags*/ {
+  color/* this is the color property */: red/* this is the value of, red */; /* these two together are a decloration*/
+  font-size/* this is the font size property */: 200%/* this is the value of 200% times the size of the original font */;
+}
+
+/* CSS reset, youre going to want to include this in every css sheet you make because it removes the default styles that your browser creates. */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* next usually in your css sheet you link an external font, you can use normal fonts like 'Comic Sans MS' but external fonts are way cooler. to to this you need to upload or get a pre hosted font file. use .woff or .woff2 if you can. you will reference this when you use the property 'font-family'*/
+
+@font-face {
+    font-family: 'gamer';
+    src: url('https://fuckingwebmaster.net/fonts/gamer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* to add a custom cursor, you will use a .cur or .png file. */
+
+*, body, html /* body and html means the cursor will be used on the entire page */ {
+   cursor: url('https://fuckingwebmaster.net/images/cur.png'), auto;
+}
+
+a, a:hover /*but to make a cursor change when you hover over a link, do this */ {
+  cursor: url('https://fuckingwebmaster.net/images/link.png'), auto;
+}
+
+/* the body is how you change most of how the page looks */
+
+body {
+	background-color: #847c7c; /* this is the color of the background, the background image will always be on top of the color */
+    background-image: url('https://fuckingwebmaster.net/images/bgs/gunbg.png'); /* this is how you change the pages background image */
+	font-family: 'gamer'; /* mentioned above, here you reference external fonts, or normal fonts */
+	color: #3c2b1b; /* this is how you change the color of the font/text */
+	font-size: 23px; /* this is the sixe of the <p></p> tag */
+	line-height: 30px; /* this changes the height of the lines between text */
+}
+
+/* although this doesnt work on firefox, who fucking uses firefox? this is how you change what the scrollbar looks like. theres more ways of styling it but here are the most important parts. */
+
+::-webkit-scrollbar {
+	width: 6px; /* changes width of scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3c2b1b; /* changes color of the part of the scrollbar you click on */
+}
+
+::-webkit-scrollbar-track {
+	background-color: #aeaaa6; /*changes color of the background of the scrollbar */
+}
+
+/* links. these are all styles to change the color of a link when its clicked, already visited, etc. you can also change the text decoration, i.e. if its underlined or italicized. */
+
+a {
+	color: #b5b4ae; /* this changes the color of the link you see normally */
+	font-weight: bold; /* this dictates whether the link is bold or not */
+}
+
+a:hover /* all styles inside of this affect the link when your mouse is hovered over it*/ {
+	color: #b5b4ae; 
+	font-weight: normal;
+	text-decoration: none; /* this is whether the link is underlined or not */
+	font-style: italic; /* this makes the link italicized */
+}
+
+a:visited /* all styles inside of this affect the link after youve already clicked it */ {
+	text-decoration: none;
+	color: #b5b4ae;
+}
+
+a:active /* all styles inside of this affect the link while you are currently clicking it */ {
+	color: red;
+}
+
+/* the ::selection styling changes the colors, font, etc. of somethile while you highlight or select text. */
+
+::selection {
+  background: #acaba4; /* as you can probably guess, this changes the background color of the highlighted text */
+  color: #3c2b1b; /* this is the color of the highlighted text */
+}

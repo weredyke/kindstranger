@@ -1,0 +1,385 @@
+ /*cursor shit*/
+ 
+* {
+   cursor: url('/images/shrines/klk/cursor.png'), auto;
+}
+
+body {
+   cursor: url('/images/shrines/klk/cursor.png'), auto;
+}
+
+iframe, a, a:hover {
+  cursor: url('/images/shrines/klk/link.png'), auto;
+}
+
+img>a:hover {
+  cursor: url('/images/shrines/klk/link.png'), auto;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, pre, s, del, li {
+  cursor: url('/images/shrines/klk/cursor.png'), auto;
+}
+  
+/*font shit*/
+
+@font-face {
+    font-family: 'fontreg';
+    src: url('/images/shrines/klk/font.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* this is called a CSS reset, it removes default styles from your page */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 50px;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*meat and potatoes*/
+
+html {
+  font-size: 15px; 
+}
+
+body {
+	margin: 0;
+	background-color: #000000;
+	font-family: 'fontreg';
+	color: #ffffff;
+	background-image: url('/images/shrines/klk/klkbg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-size: 100% 100%;
+	height: 100%;
+	font-size: 15px;
+	line-height: 1;
+		padding: 0 2rem;
+}
+
+#main {
+  margin-left: auto;
+	margin-right: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	letter-spacing: 1.5px;
+	line-height: 22px;
+	margin-top: 1%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.msg {
+  border: 4px #D95030 double;
+  padding: 20px;
+  margin: 30px;
+  text-align: center;
+  background-color: rgba(000,000,000,0.7);
+}  
+
+/*grid layout*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "left top top top top top top top right"
+    "left top top top top top top top right"
+    "left leftcenter leftcenter middle middle middle rightcenter rightcenter right"
+    "left leftcenter leftcenter middle middle middle rightcenter rightcenter right"
+    "left leftcenter leftcenter middle middle middle rightcenter rightcenter right"
+    "left leftcenter leftcenter middle middle middle rightcenter rightcenter right"
+    "left leftcenter leftcenter . . . rightcenter rightcenter right";
+}
+
+.left { 
+  grid-area: left; 
+  border: 4px outset #AB4455;
+  background-color: rgba(77,89,111, 0.6);
+  text-align:center;
+  padding: 20px;
+}
+
+.right { 
+  grid-area: right; 
+  border: 4px outset #AB4455;
+  background-color: rgba(77,89,111, 0.6);
+  text-align:center;
+  padding: 20px;
+}
+
+.top { 
+  grid-area: top; 
+  border: 4px outset #AB4455;
+  background-color: rgba(77,89,111, 0.6);
+  text-align:center;
+  padding: 20px;
+}
+
+.leftcenter { 
+  grid-area: leftcenter; 
+  background-image: url('/images/shrines/klk/klkthreads2.png');
+  background-size: 100% 100%;
+  border: 4px outset #AB4455;
+  background-color: rgba(77,89,111, 0.6);
+  padding: 20px;
+}
+
+.rightcenter { 
+  grid-area: rightcenter; 
+  background-image: url('/images/shrines/klk/klkthreads.png');
+  background-size: 100% 100%;
+  border: 4px outset #AB4455;
+  background-color: rgba(77,89,111, 0.6);
+  padding: 20px;
+}
+
+.middle { 
+  grid-area: middle; 
+  border: 4px outset #AB4455;
+  background-color: rgba(77,89,111, 0.6);
+  text-align:center;
+  padding: 20px;
+}
+
+
+/* This lets you use div class="column left" and "column right" for two columns */
+
+.leftdiv {
+	width: 45%;
+	float: left;
+}
+
+.rightdiv {
+	width: 45%;
+	float: right;
+}
+
+/*makes the text tilt*/
+
+.third-degree {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+    
+    display: inline-block;
+    position: relative;
+    
+}
+
+.third-degree-neg {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    
+    display: inline-block;
+    position: relative;
+    
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #D95030;
+}
+
+/*for some kind of blinking animation */
+
+.blink_me {
+	animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+/* Table Styling */
+
+table {
+	width: 80%;
+	font-size: 30px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+tr:nth-child(even) {
+	background-color: #D95030;
+}
+
+td {
+	padding: 10px;
+}
+
+/*graphics styles*/
+
+.buttons img {
+  margin: 3px; 
+}
+
+.blinkies img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*misc styles*/
+
+strong {
+  font-weight: normal;
+  color: #D95030;
+  font-size: 15px;
+}
+
+summary {
+  font-size: 15px; 
+}
+
+li {
+  margin: 10px;
+  font-size: 15px;
+}
+
+span {
+  font-size: 15px;
+  background-color: #D95030;
+  color: black;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+p { 
+  font-size: 15px;
+}
+
+a {
+	color: #FFF47D;
+	font-weight:normal;
+}
+
+a:hover {
+ color: #D95030;
+ font-weight: normal;
+ text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+::selection {
+  background: magenta;
+  color: white;
+}
+
+/* All stuff below here is for viewing your site on different devices */
+
+@media screen and (max-width: 1536px) {
+    #main {
+	zoom: 70%;
+}
+}
+
+@media screen and (max-width: 1440px) {
+    #main {
+	zoom: 65%;
+}
+}
+
+@media screen and (max-width: 1366px) {
+    #main {
+	zoom: 60%;
+}
+}
+
+@media screen and (max-width: 1280px) {
+    #main {
+	zoom: 55%;
+}
+}
+
+@media screen and (max-width: 1024px) {
+    #main {
+	zoom: 50%;
+}
+}
+
+@media screen and (max-width: 992px) {
+    #main {
+	zoom: 45%;
+}
+}
+
+@media screen and (max-width: 800px) {
+    #main {
+	zoom: 40%;
+}
+}
+
+@media screen and (max-width: 600px) {
+  #main {
+	zoom: 35%;
+}
+}

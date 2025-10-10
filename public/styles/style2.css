@@ -1,0 +1,239 @@
+/* CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* font shit */
+
+@font-face {
+    font-family: 'gamer';
+    src: url('/fonts/gamer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* cursor shit */
+
+* {
+   cursor: url('/images/cur.png'), auto;
+}
+
+body, html {
+   cursor: url('/images/cur.png'), auto;
+}
+
+a, a:hover {
+  cursor: url('/images/link.png'), auto;
+}
+
+
+/* the The main stuff */
+
+body {
+    animation-name: attract;
+    animation-iteration-count: infinite;
+    animation-duration: 11s;
+    animation-timing-function: linear;
+    background-image: url('/images/bgs/glockbg.png');
+	font-family: 'gamer';
+	color: #3c2b1b;
+	font-size: 23px;
+	line-height: 30px;
+	text-align: center;
+	margin:0 auto;
+	overflow-x: hidden;
+}
+
+#everything {
+	min-width:900px;
+	margin: 30px auto;
+	width:65%;
+	border: 15px solid transparent;
+	border-image-source: url(/images/index/bulletborder.png);
+	border-image-repeat: round;
+	background-color: #847c7c;
+	border-image-slice: 30;
+	text-align: center;
+}
+
+/* animations */
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    background-image: url(/images/computeroverlay.png);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    z-index: 10000000;
+    animation: ScanlineAnimationLeft 2s linear infinite;
+    animation-name: ScanlineAnimationLeft;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    opacity: 1;
+}
+
+@keyframes ScanlineAnimationRight {
+  	  0% {transform: translateX(0px) translateY(0px);}100% {transform: translateX(32px) translateY(-32px);}
+  	  }
+      @keyframes ScanlineAnimationLeft {
+  	  0% {transform: translateX(0px) translateY(0px);}100% {transform: translateX(-32px) translateY(-32px);}
+  	  }
+
+@keyframes attract {
+0% {
+    background-color: #aeaaa6;
+    background-position: 0px 680px;
+}
+100% {
+    background-color: #aeaaa6;
+    background-position: 1000px 0px;
+}
+}
+
+/*scrollbar*/
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3c2b1b;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #aeaaa6;
+}
+
+/* misc styles */
+
+h1 {
+	font-size: 160%;
+}
+
+h2 {
+	font-size: 150%;
+}
+
+h3 {
+	font-size: 140%;
+}
+
+h4 {
+	font-size: 130%;
+}
+
+h6 {
+	font-size: 120%;
+}
+
+h6 {
+	font-size: 110%;
+}
+ 
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tiny {
+	font-size: 70%;
+}
+
+a {
+	color: #b5b4ae;
+	font-weight:normal;
+}
+
+a:hover {
+ color: #b5b4ae;
+ font-weight: normal;
+ text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none; 
+  color: #b5b4ae;
+}
+
+
+::selection {
+  background: #acaba4;
+  color: #3c2b1b;
+}
+
+#msg {
+	width: 60%;
+	overflow-x: hidden;
+	margin: 0px auto;
+}
+
+#msg hr {
+	border: .5px solid #3c2b1b;
+}
+
+/* All stuff below here is for viewing your site on different devices */
+
+@media screen and (max-width: 1536px) {
+	body { zoom: 80%; }
+}
+
+@media screen and (max-width: 1440px) {
+	body { zoom: 75%; }
+}
+
+@media screen and (max-width: 1366px) {
+	body { zoom: 70%; }
+}
+
+@media screen and (max-width: 1280px) {
+	body { zoom: 65%; }
+}
+
+@media screen and (max-width: 1024px) {
+	body { zoom: 60%; }
+}
+
+@media screen and (max-width: 992px) {
+	body { zoom: 55%; }
+}
+
+@media screen and (max-width: 800px) {
+	body { zoom: 50%; }
+}
+
+@media screen and (max-width: 600px) {
+	body { zoom: 45%; }
+}

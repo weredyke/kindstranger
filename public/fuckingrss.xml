@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>lucas' RSS</title>
+    <link>https://fuckingwebmaster.net</link>
+    <description>Updates on what's fuckin in my domain!</description>
+    <language>en-us</language>
+    <webMaster>fuckingwebmaster@protonmail.com</webMaster>
+    <image>
+      <title>lucas' RSS</title>
+      <link>https://fuckingwebmaster.net</link>
+      <url>https://fuckingwebmaster.net/images/misc/cozy.png</url>
+      <width>135</width>
+      <height>128</height>
+    </image>
+	
+	<item>
+      <title>Hatemail</title>
+      <pubDate>Tue, 28 Sept 2021 11:41:00 -0700</pubDate>
+      <link>https://fuckingwebmaster.net</link>
+      <guid>https://fuckingwebmaster.net</guid>
+      <author>fuckingwebmaster@protonmail.com</author>
+      <category>new feature</category>
+      <description><![CDATA[<h1>new hatemail page</h1><br></br>
+	  <p>new way to send hatemail, because the old guesbtook broke. accessed by clicking the "leave me some hatemail" link on the right sidebar at the index page.</p>]]></description>
+    </item>
+	<!--divider-->
+	<item>
+      <title>links</title>
+      <pubDate>Mon, 27 Sept 2021 15:02:00 -0700</pubDate>
+      <link>https://fuckingwebmaster.net/online/links.html</link>
+      <guid>https://fuckingwebmaster.net/online/links.html</guid>
+      <author>fuckingwebmaster@protonmail.com</author>
+      <category>page update</category>
+      <description><![CDATA[<h1>updated links</h1><br></br>
+	  <img ="https://fuckingwebmaster.net/images/rss/9272021.png"><br>
+	  <p>new category of links called anonymity. gives links to help you stay anonymous and protect your privacy on the web.</p>]]></description>
+    </item>
+	<!--divider-->
+	<item>
+      <title>resources</title>
+      <pubDate>Wed, 7 Jul 2021 18:04:00 -0700</pubDate>
+      <link>https://fuckingwebmaster.net/resources.html</link>
+      <guid>https://fuckingwebmaster.net/resources.html</guid>
+      <author>fuckingwebmaster@protonmail.com</author>
+      <category>page update</category>
+      <description><![CDATA[<h1>new page for all graphics i make</h1><br></br>
+	  <img ="https://fuckingwebmaster.net/images/rss/ssresources.png"><br>
+	  <p>please read my terms of service before using!</p>]]></description>
+    </item>
+	<!--divider-->
+	<item>
+      <title>test</title>
+      <pubDate>Tue, 6 Jul 2021 15:09:00 -0700</pubDate>
+      <link>https://fuckingwebmaster.net</link>
+      <guid>https://fuckingwebmaster.net</guid>
+      <author>fuckingwebmaster@protonmail.com</author>
+      <category>test</category>
+      <description><![CDATA[<h1>hi this is a test</h1><br></br>
+	  <img ="https://fuckingwebmaster.net/images/misc/cozy.png"><br>
+	  <p>this is the description of the test that im doing....hehehe</p>]]></description>
+    </item>
+	<!--divider-->
+    <item>
+      <title>record player</title>
+      <pubDate>Tue, 6 Jul 2021 07:21:29 -0700</pubDate>
+      <link>https://fuckingwebmaster.net/records.html</link>
+      <guid>https://fuckingwebmaster.net/records.html</guid>
+      <author>fuckingwebmaster@protonmail.com</author>
+      <category>page update</category>
+      <description><![CDATA[i have added a page where i can share my favorite songs and albums...i like this page lots.........]]></description>
+    </item>
+
+<!-- TEMPLATE RSS FEED -->
+<!--item>
+<title>Article 1</title>
+<link>example.com/1</link>
+<guid> example.com/1</guid>
+<pubDate>Mon, 25 Nov 2013 15:10:45 GMT</pubDate>
+<description>My first article.</description>
+</item-->
+</channel>
+</rss>
+
+

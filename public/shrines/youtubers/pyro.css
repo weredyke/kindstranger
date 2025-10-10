@@ -1,0 +1,367 @@
+ /*cursor shit*/
+ 
+* {
+   cursor: url('/images/shrines/pyro/normal.cur'), auto;
+}
+
+body {
+   cursor: url('/images/shrines/pyro/normal.cur'), auto;
+}
+
+iframe, a, a:hover {
+  cursor: url('/images/shrines/pyro/select.cur'), auto;
+}
+
+img>a:hover {
+  cursor: url('/images/shrines/pyro/select.cur'), auto;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, pre, s, del, li {
+  cursor: url('/images/shrines/pyro/text.cur'), auto;
+}
+  
+/*font shit*/
+
+@font-face {
+    font-family: 'dock11';
+    src: url('/images/shrines/pyro/dock11.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* this is called a CSS reset, it removes default styles from your page */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 50px;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*meat and potatoes*/
+
+html {
+  font-size: 15px; 
+}
+
+body {
+	margin: 0;
+	background-color: #000000;
+	font-family: 'dock11';
+	color: #ffffff;
+	background-image: url('/images/shrines/pyro/pyrobg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-size: 100% 100%;
+	height: 100%;
+	font-size: 15px;
+	line-height: 1;
+		padding: 0 2rem;
+}
+
+#main {
+  margin-left: auto;
+	margin-right: auto;
+	padding-left: 5%;
+	padding-right: 5%;
+	letter-spacing: 1.5px;
+	line-height: 22px;
+	margin-top: 1%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.msg {
+  border: 4px purple double;
+  padding: 20px;
+  margin: 30px;
+  text-align: center;
+  background-color: rgba(000,000,000,0.7);
+}  
+
+/*grid layout*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header header header header header header header header"
+    "header header header header header header header header"
+    "leftbar mainshit mainshit mainshit mainshit mainshit vid1 vid1"
+    "leftbar mainshit mainshit mainshit mainshit mainshit vid2 vid2"
+    "leftbar mainshit mainshit mainshit mainshit mainshit vid3 vid3"
+    "leftbar mainshit mainshit mainshit mainshit mainshit vid4 vid4"
+    "leftbar comments comments comments comments comments vid5 vid5"
+    "leftbar comments comments comments comments comments vid6 vid6";
+}
+
+.header { 
+  grid-area: header; 
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center bottom;
+  background-image: url('/images/shrines/pyro/pyrobanner.jpg');
+  }
+
+.mainshit { 
+  grid-area: mainshit;
+  border: 4px double purple;
+  background-color: rgba(255,255,255,0.5);
+  text-align:center;
+}
+
+.vid1 { 
+  grid-area: vid1; 
+  border: 1px solid purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.vid2 { 
+  grid-area: vid2; 
+  border: 1px solid purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.vid3 { 
+  grid-area: vid3; 
+  border: 1px solid purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.vid4 { 
+  grid-area: vid4; 
+  border: 1px solid purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.vid5 { 
+  grid-area: vid5; 
+  border: 1px solid purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.vid6 { 
+  grid-area: vid6; 
+  border: 1px solid purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.comments { 
+  grid-area: comments; 
+  padding: 20px;
+  border: 4px double purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.leftbar { 
+  grid-area: leftbar; 
+  border: 4px double purple;
+  background-color: rgba(255,255,255,0.5);
+}
+
+/*for video divs & comment shit*/
+
+.vid {float:left;margin:20px;height:98px;width:175px;border:1px black solid;}
+
+.vidtitle {float:right;margin:10px;width:40%;}
+
+.commentpfp {
+  border: 1px black solid;
+  border-radius: 150px;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(magenta, indigo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+/*audio*/
+
+.audio {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+audio {
+	width: 100px;
+	height: 15px;
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: purple;
+}
+
+/*for some kind of blinking animation */
+
+.blink_me {
+	animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+/*misc styles*/
+
+strong {
+  font-weight: normal;
+  color: purple;
+  font-size: 15px;
+}
+
+summary {
+  font-size: 15px; 
+}
+
+li {
+  margin: 10px;
+  font-size: 15px;
+}
+
+span {
+  font-size: 15px;
+  background-color: purple;
+  color: black;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+p { 
+  font-size: 15px;
+}
+
+a {
+	color: purple;
+	font-weight:normal;
+}
+
+a:hover {
+ color: indigo;
+ font-weight: normal;
+ text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+::selection {
+  background: magenta;
+  color: white;
+}
+
+/* All stuff below here is for viewing your site on different devices */
+
+@media screen and (max-width: 1536px) {
+    #main {
+	zoom: 80%;
+}
+}
+
+@media screen and (max-width: 1440px) {
+    #main {
+	zoom: 75%;
+}
+}
+
+@media screen and (max-width: 1366px) {
+    #main {
+	zoom: 70%;
+}
+}
+
+@media screen and (max-width: 1280px) {
+    #main {
+	zoom: 65%;
+}
+}
+
+@media screen and (max-width: 1024px) {
+    #main {
+	zoom: 60%;
+}
+}
+
+@media screen and (max-width: 992px) {
+    #main {
+	zoom: 55%;
+}
+}
+
+@media screen and (max-width: 800px) {
+    #main {
+	zoom: 50%;
+}
+}
+
+@media screen and (max-width: 600px) {
+  #main {
+	zoom: 45%;
+}
+}

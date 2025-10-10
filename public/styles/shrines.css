@@ -1,0 +1,371 @@
+/* CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* font shit */
+
+@font-face {
+    font-family: 'gamer';
+    src: url('/fonts/gamer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* cursor shit */
+
+* {
+   cursor: url('/images/cur.png'), auto;
+}
+
+body, html {
+   cursor: url('/images/cur.png'), auto;
+}
+
+a, a:hover {
+  cursor: url('/images/link.png'), auto;
+}
+
+
+/* the The main stuff */
+
+body {
+    
+    background-image: url('/images/bgs/acbg.png');
+	font-family: 'gamer';
+	color: #3c2b1b;
+	font-size: 23px;
+	line-height: 30px;
+	text-align: center;
+	margin:0 auto;
+	overflow-x: hidden;
+}
+
+#everything {
+	margin: 30px auto;
+	width:40%;
+	min-width:570px;
+	background-image: url('/images/misc/topborder.png');
+	padding-top: 17px;
+	background-size: 100% 17px;
+	background-repeat: no-repeat;
+}
+
+#main {
+	padding-right:5px;
+	padding-left:5px;
+	padding-bottom:6px;
+	height: auto;
+	background-color: #636e64;
+	border-bottom: 1px black solid;
+	border-left: 1px black solid;
+	border-right: 1px black solid;
+	text-align: center;
+	height: 680px;
+	min-height:680px;
+	max-height:680px;
+}
+
+#back {
+	margin: 20px auto;
+	width: 337px;
+	height: 40px;
+	line-height: 55px;
+	transform: scale(1);
+	transition: transform 0.5s linear;
+}
+
+#back:hover {
+	transform: scale(1.1);
+	image-rendering:crisp-edges;
+}
+
+#back p {
+	font-family: 'gamer';
+	color: #3c3b3a;
+    text-shadow: -2px 2px #b7a99a;
+	font-size: 500%;
+	font-style: italic;
+	margin: auto;
+}
+
+#back img {
+	transform: rotate(-20deg);
+	float: left;
+}
+
+#top {
+    background-attachment: fixed;
+    background-position: top; 
+	background-repeat: repeat-x;
+	background-image: url('/images/misc/obi.gif');
+	width: 100%;
+	height: 50px;
+		
+}
+
+#shrinetitle {
+	animation: pulse 1s infinite linear;
+	width: 430px;
+	margin: 0px auto;
+    height: 50px;
+    line-height: 75px;
+}
+
+#shrinetitle1 {
+	animation: pulse 1s infinite linear;
+	width: 530px;
+	margin: 0px auto;
+    height: 50px;
+    line-height: 75px;
+}
+
+#shrinetitle h1, #shrinetitle1 h1 {
+	font-family: 'gamer';
+	color: #3c3b3a;
+    text-shadow: -2px 2px #b7a99a;
+	font-size: 200%;
+}
+
+.leftgun {
+	transform: rotate(-20deg);
+	float: left;
+	display: inline;
+	margin-right: -20px;
+}
+
+
+.rightgun {
+	transform: rotate(20deg) rotatey(180deg);
+	float: right;
+	display: inline;
+	margin-left: -20px;
+}
+
+/* columns */
+
+.flex {
+	display: flex;
+}
+
+.half {
+	width: 45%;
+	margin: 0px auto;
+	order: 1;
+}
+
+.third {
+	width: 30%;
+	margin: 0px auto;
+	order: 1;
+}
+
+/* animations */
+
+#shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes pulse {
+  0% {
+	transform: scale(0.95);
+  }
+  50% {
+	transform: scale(1);
+  }
+  100% {
+	transform: scale(0.95);
+  }
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    background-image: url(/images/computeroverlay.png);
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-repeat: repeat;
+    background-repeat-x: repeat;
+    background-repeat-y: repeat;
+    z-index: 10000000;
+    animation: ScanlineAnimationLeft 2s linear infinite;
+    animation-name: ScanlineAnimationLeft;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    opacity: 1;
+}
+
+@keyframes ScanlineAnimationRight {
+  	  0% {transform: translateX(0px) translateY(0px);}100% {transform: translateX(32px) translateY(-32px);}
+  	  }
+      @keyframes ScanlineAnimationLeft {
+  	  0% {transform: translateX(0px) translateY(0px);}100% {transform: translateX(-32px) translateY(-32px);}
+  	  }
+
+/*audio*/
+
+.audio {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+audio {
+	width: 100px;
+	height: 15px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #aeaaa6;
+  color: #3c2b1b;
+}
+
+/*scrollbar*/
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3c2b1b;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #aeaaa6;
+}
+
+/* misc styles */
+
+h1 {
+	font-size: 160%;
+}
+
+h2 {
+	font-size: 150%;
+}
+
+h3 {
+	font-size: 140%;
+}
+
+h4 {
+	font-size: 130%;
+}
+
+h6 {
+	font-size: 120%;
+}
+
+h6 {
+	font-size: 110%;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+	color: #b5b4ae;
+	font-weight:normal;
+}
+
+a:hover {
+ color: #b5b4ae;
+ font-weight: normal;
+ text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none; 
+  color: #b5b4ae;
+}
+
+::selection {
+  background: #acaba4;
+  color: #3c2b1b;
+}
+
+hr {
+	border: .5px solid #3c2b1b;
+}
+
+/* All stuff below here is for viewing your site on different devices */
+
+@media screen and (max-width: 1536px) {
+	body { zoom: 80%; }
+}
+
+@media screen and (max-width: 1440px) {
+	body { zoom: 75%; }
+}
+
+@media screen and (max-width: 1366px) {
+	body { zoom: 70%; }
+}
+
+@media screen and (max-width: 1280px) {
+	body { zoom: 65%; }
+}
+
+@media screen and (max-width: 1024px) {
+	body { zoom: 60%; }
+}
+
+@media screen and (max-width: 992px) {
+	body { zoom: 55%; }
+}
+
+@media screen and (max-width: 800px) {
+	body { zoom: 50%; }
+}
+
+@media screen and (max-width: 600px) {
+	body { zoom: 45%; }
+}

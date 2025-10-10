@@ -1,0 +1,89 @@
+/* this is called a CSS reset, it removes default styles from your page */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* cursor shit */
+
+* {
+   cursor: url('/images/cur.png'), auto;
+}
+
+body, html {
+   cursor: url('/images/cur.png'), auto;
+}
+
+a, a:hover {
+  cursor: url('/images/link.png'), auto;
+}
+
+/* idk what fuckery this is */
+body {
+	background-color: #000;
+	color: #fff;
+	overflow-x: hidden;
+}
+
+table {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+
+th, td {
+	font-size:13px; 
+	font-weight:normal; 
+	text-align:left; 
+	vertical-align:top;
+	font-family: 'verdana';
+}
+
+a, a:hover, a:active {
+	color: #b5b4ae;
+	text-decoration: underline;
+}
+
+#left {
+	float: left;
+}
+
+::selection {
+  background: #acaba4;
+  color: #3c2b1b;
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #fff;
+}
+
+::-webkit-scrollbar-track {
+}

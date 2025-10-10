@@ -1,0 +1,352 @@
+ /*cursor shit*/
+
+*, body, html {
+   cursor: url('/images/shrines/misato/cursor.png'), auto;
+}
+
+iframe, a, a:hover {
+  cursor: url('/images/shrines/misato/link.png'), auto;
+}
+
+p, span, h1, h2, h3, h4, h5, h6, pre, s, del, li {
+  cursor: url('/images/shrines/misato/cursor.png'), auto;
+}
+  
+/*font shit*/
+
+/* this is called a CSS reset, it removes default styles from your page */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 50px;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/*meat and potatoes*/
+
+html {
+  font-size: 15px; 
+}
+
+body {
+	margin: 0;
+	background-color: #fff;
+	font-family: 'helvetica';
+	color: #70544d;
+	background-image: url('/images/shrines/misato/misatospin.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-size: 100% 100%;
+	height: 100%;
+	font-size: 15px;
+	line-height: 1;
+		padding: 0 2rem;
+}
+
+#main {
+  margin-left: auto;
+	margin-right: auto;
+	padding-left: 6%;
+	padding-right: 6%;
+	letter-spacing: 1.5px;
+	line-height: 22px;
+	margin-top: 1%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.msg {
+  border: 4px #D95030 double;
+  padding: 20px;
+  margin: 30px;
+  text-align: center;
+  background-color: rgba(000,000,000,0.7);
+}  
+
+/*grid layout*/
+
+.container {
+	height: 1100px;
+  display: grid;
+  grid-template-columns: 0.8fr 2.1fr 0.2fr 0.9fr;
+  grid-template-rows: 1fr 0.6fr 1.1fr 0.4fr 0.5fr 0.7fr; 
+  grid-auto-columns: 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "lefttop header header righttop"
+    "lefttop centerstuff right right"
+    "leftbottom centerstuff right right"
+    "leftbottom . right right"
+    "marqueefun marqueefun marqueefun marqueefun"
+    "bottom bottom bottom bottom";
+}
+
+.header { 
+  grid-area: header;
+  border: 4px #895857 solid;
+  background-color: rgba(219,155,142,0.5);
+  }
+
+.lefttop { 
+  grid-area: lefttop; 
+  border: 4px #895857 solid;
+  background-color: rgba(219,155,142,0.5);
+  text-align: center;
+  }
+
+.leftbottom { 
+  grid-area: leftbottom; 
+  border: 4px #895857 solid;
+  background-color: rgba(219,155,142,0.5);
+  text-align: center;
+  }
+
+.centerstuff { 
+  grid-area: centerstuff; 
+  border: 4px #895857 solid;
+  background-color: rgba(219,155,142,0.5);
+  }
+
+.marqueefun { 
+  grid-area: marqueefun; 
+  border: 4px #895857 solid;
+  background-color: rgba(219,155,142,0.5);
+  }
+
+.bottom { 
+  grid-area: bottom; 
+  border: 4px #895857 solid;
+  background-color: rgba(219,155,142,0.5);
+  }
+
+.right { 
+  grid-area: right; 
+  border: 4px #895857 solid;
+  background-color: rgba(219,155,142,0.5);
+  }
+
+.righttop { 
+  grid-area: righttop;
+  }
+/* This lets you use div class="column left" and "column right" for two columns */
+
+.leftdiv {
+	width: 45%;
+	float: left;
+}
+
+.rightdiv {
+	width: 45%;
+	float: right;
+}
+
+/*makes the text tilt*/
+
+.third-degree {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+    
+    display: inline-block;
+    position: relative;
+    
+}
+
+.third-degree-neg {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    
+    display: inline-block;
+    position: relative;
+    
+}
+
+/* Scrollbar Styling */
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #D95030;
+}
+
+/*for some kind of blinking animation */
+
+.blink_me {
+	animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+/* Table Styling */
+
+table {
+	width: 80%;
+	font-size: 30px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+tr:nth-child(even) {
+	background-color: #D95030;
+}
+
+td {
+	padding: 10px;
+}
+
+/*graphics styles*/
+
+.buttons img {
+  margin: 3px; 
+}
+
+.blinkies img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*misc styles*/
+
+strong {
+  font-weight: normal;
+  color: #D95030;
+  font-size: 15px;
+}
+
+summary {
+  font-size: 15px; 
+}
+
+li {
+  margin: 10px;
+  font-size: 15px;
+}
+
+span {
+  font-size: 15px;
+  background-color: #D95030;
+  color: black;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+p { 
+  font-size: 15px;
+}
+
+a {
+	color: #917d7a;
+	font-weight:normal;
+}
+
+a:hover {
+ color: #f5ebca;
+ font-weight: normal;
+ text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none; 
+}
+
+ul {
+    list-style-type: none;
+}
+
+::selection {
+  background: #895857;
+  color: #d3a295;
+}
+
+
+/* All stuff below here is for viewing your site on different devices */
+
+@media screen and (max-width: 1536px) {
+	body { zoom: 80%; }
+}
+
+@media screen and (max-width: 1440px) {
+	body { zoom: 75%; }
+}
+
+@media screen and (max-width: 1366px) {
+	body { zoom: 70%; }
+}
+
+@media screen and (max-width: 1280px) {
+	body { zoom: 65%; }
+}
+
+@media screen and (max-width: 1024px) {
+	body { zoom: 60%; }
+}
+
+@media screen and (max-width: 992px) {
+	body { zoom: 55%; }
+}
+
+@media screen and (max-width: 800px) {
+	body { zoom: 50%; }
+}
+
+@media screen and (max-width: 600px) {
+	body { zoom: 45%; }
+}
